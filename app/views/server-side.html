@@ -1,0 +1,17 @@
+<div ng-controller="ServerSideController">
+	<div loading-container="tableParams.settings().$loading">
+      <table ng-table="tableParams" show-filter="true" class="table">
+        <tbody>
+          <tr ng-repeat="user in $data">
+            <td data-title="'Name'" filter="{ 'name': 'text' }" sortable="name">
+                    {{user.name}}
+                    {{$loading}}
+                </td>
+            <td data-title="'Age'" sortable="age">
+                    {{user.age}}
+                </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
