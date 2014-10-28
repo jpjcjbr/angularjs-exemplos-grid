@@ -18,7 +18,8 @@ angular
     'ngTouch',
     'smart-table',
     'ngTable',
-    'ngMockE2E'
+    'ngMockE2E',
+    'ui.bootstrap'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -29,6 +30,10 @@ angular
       .when('/server-side', {
         templateUrl: 'views/server-side.html',
         controller: 'ServerSideController'
+      })
+      .when('/date', {
+        templateUrl: 'views/date-picker.html',
+        controller: 'DatePickerController'
       })
       .otherwise({
         redirectTo: '/client-side'

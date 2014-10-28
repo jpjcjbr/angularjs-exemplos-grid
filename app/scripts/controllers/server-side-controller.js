@@ -8,19 +8,19 @@
  * Controller of the scopeExamplesApp
  */
 angular.module('scopeExamplesApp')
-  .controller('ServerSideController', 
-    ['$scope', '$timeout', '$resource', 'ngTableParams', 
+  .controller('ServerSideController',
+    ['$scope', '$timeout', '$resource', 'ngTableParams',
     function ($scope, $timeout, $resource, ngTableParams) {
-        
+
         var Api = $resource('/data');
-        
+
         $scope.tableParams = new ngTableParams({
             page: 1,            // show first page
             count: 5,          // count per page
             sorting: {
                 name: 'asc'     // initial sorting
             }
-        }, 
+        },
         {
             total: 0,           // length of data
             getData: function($defer, params) {
